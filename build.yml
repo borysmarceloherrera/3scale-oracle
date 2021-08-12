@@ -11,11 +11,13 @@ objects:
     name: "3scale-amp-system-oracle"
   spec:
     source:
-      type: Binary
+      git: 
+        uri: "https://github.com/borysmarceloherrera/3scale-oracle.git"
+        ref: "main"
     output:
       to:
         kind: "ImageStreamTag"
-        name: "amp-system:${AMP_RELEASE}-oracle"
+        name: "amp-system-tecban:${AMP_RELEASE}-oracle"
     strategy:
       type: Docker
       dockerStrategy:
